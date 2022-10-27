@@ -19,7 +19,7 @@ class Main{
         int answer = sc.nextInt();
         String content = null;
         if (answer == 1){
-            String filePath = "01.txt";
+            String filePath = "2.txt";
 
             try {
                 content = readFile(filePath, StandardCharsets.UTF_8);
@@ -28,9 +28,10 @@ class Main{
             }
         }
         else {
+            sc.nextLine();
             content = sc.nextLine();
         }
-        char[] array = content.toLowerCase().replaceAll("[^A-Za-zА-Яа-я0-9]", "").toCharArray();
+        char[] array = content.toLowerCase().replaceAll("[^A-Za-zА-Яа-я]", "").toCharArray();
         Arrays.sort(array);
         int count = 1;
         int countAll = 0;
